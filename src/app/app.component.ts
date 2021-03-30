@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'paymentgateway';
+  title = 'Api Integration';
+
+  // showDashBoard = localStorage.getItem('token') ? true : false;
+  showDashBoard =  false;
 }

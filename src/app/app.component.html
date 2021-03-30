@@ -1,1 +1,4 @@
-<router-outlet></router-outlet>
+<app-dashboard *ngIf="showDashBoard;else hideDashBoard"></app-dashboard>
+<ng-template #hideDashBoard>
+    <router-outlet></router-outlet>
+</ng-template>

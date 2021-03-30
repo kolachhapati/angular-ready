@@ -1,8 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.css" ;
 @import '@angular/material/prebuilt-themes/indigo-pink';
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html, body { 
+  height: 100%; 
+  font-family: 'Roboto',sans-serif;
+}
+body { margin: 0;  font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 /*  Global App CSS */
 
@@ -119,4 +122,33 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   
   .login-wrapper .mat-form-field-appearance-legacy .mat-form-field-infix {
     padding: 0.8375em 0;
+  }
+
+
+  mat-sidenav-container,mat-sidenav-content,mat-sidenav {
+    height:100% ;
+  }
+
+  mat-sidenav{
+      width: 200px;
+  }
+
+  a{
+      text-decoration: none;
+      color: white;
+  }
+
+  a:hover,a:active {
+    color: lightgreen;
+  }
+
+  .navigation-items{
+      list-style: none;
+      padding: 0;
+      margin: 0;
+  }
+
+  .nav-caption{
+      display: inline-block;
+      padding-left: 6px;
   }

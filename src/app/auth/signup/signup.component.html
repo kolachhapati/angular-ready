@@ -17,10 +17,14 @@
             <mat-form-field>
                 <input type="password" matInput formControlName="passwordConfirmation" placeholder="Confirm Password.."
                     required>
+                <mat-hint>Must MATCH Password!!!</mat-hint>
             </mat-form-field>
-            <button mat-stroked-button type="submit" color="accent" [disabled]="!regForm.valid" class="btn-block">Sign
+
+            <button mat-raised-button type="submit" color="primary" [disabled]="!regForm.valid" class="btn-block">Sign
                 Up</button>
+
         </mat-card>
+
     </form>
 
 

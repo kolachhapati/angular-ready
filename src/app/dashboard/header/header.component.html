@@ -1,0 +1,13 @@
+<div fxShow.gt-xs>
+    <button mat-icon-button (click)="onSidenavToggle()">
+        <mat-icon>menu</mat-icon>
+    </button>
+</div>
+<div>Logo here</div>
+<div fxFlex fxLayout fxLayoutAlign="flex-end" fxHide.xs>
+    <ul fxLayout fxLayoutGap="10px" class="navigation-items">
+        <li> <a routerLink="/signup">SignUp</a></li>
+        <li> <a routerLink="#">Options</a></li>
+        <li> <a routerLink="#"> Log Out</a></li>
+    </ul>
+</div>

@@ -26,12 +26,12 @@ export class SigninComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this.loginForm.value);
-    this.auth.login(this.loginForm.value).subscribe(res => console.log(res));
+    this.auth.login(this.loginForm.value).subscribe(
+      res => localStorage.setItem('token', res['token']));
   }
-      
-    
-  
+
+
+
 
 
 
