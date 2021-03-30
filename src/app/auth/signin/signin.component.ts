@@ -27,7 +27,11 @@ export class SigninComponent implements OnInit {
 
   onSubmit() {
     this.auth.login(this.loginForm.value).subscribe(
-      res => localStorage.setItem('token', res['token']));
+      res => {
+        localStorage.setItem('token', res['token']);
+      })
+
+      
   }
 
 

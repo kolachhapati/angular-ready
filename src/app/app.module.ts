@@ -15,6 +15,10 @@ import { SignupComponent } from '../app/auth/signup/signup.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SidenavComponent } from './dashboard/sidenav/sidenav.component';
 import { HeaderComponent } from './dashboard/header/header.component';
+import { PagesModule } from './pages/pages.module';
+
+
+
 
 @NgModule({
   declarations: [
@@ -27,6 +31,7 @@ import { HeaderComponent } from './dashboard/header/header.component';
   ],
   imports: [
     BrowserModule,
+    PagesModule,
     AppRoutingModule,
     HttpClientModule,
     AngularMaterialModule,

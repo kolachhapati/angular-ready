@@ -8,6 +8,5 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Api Integration';
 
-  // showDashBoard = localStorage.getItem('token') ? true : false;
-  showDashBoard =  false;
+  showDashBoard = localStorage.getItem('token') ? true : false;
 }
