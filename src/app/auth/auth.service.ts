@@ -1,10 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-
-
 const authUrl= 'https://localhost:44346/api/Account/';
-
 
 @Injectable({
   providedIn: 'root'
