@@ -1,9 +1,9 @@
 //Modules
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule , CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { MaterialModule } from './shared/angular-material.module';
+import { MaterialModule } from './shared/modules/angular-material.module';
 import { ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { AppRoutingModule } from './app-routing.module';
@@ -14,6 +14,7 @@ import { SignupComponent } from '../app/auth/signup/signup.component';
 import { SidenavComponent } from './dashboard/sidenav/sidenav.component';
 import { HeaderComponent } from './dashboard/header/header.component';
 import { HomeComponent } from './pages/home/home.component';
+import HttpRequestInterceptor from './shared/interceptors/http.interceptor';
 
 
 @NgModule({
@@ -34,7 +35,11 @@ import { HomeComponent } from './pages/home/home.component';
     BrowserAnimationsModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [{
+    provide: HTTP_INTERCEPTORS,
+    useClass: HttpRequestInterceptor,
+    multi: true
+  }],
   bootstrap: [AppComponent],
   schemas:[CUSTOM_ELEMENTS_SCHEMA ]
 })
