@@ -5,13 +5,14 @@ import { SignupComponent } from './auth/signup/signup.component';
 
 import { HomeComponent } from './pages/home/home.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
+import { AuthGuard } from './shared/guards/auth-guard.service';
 
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'login', component: SigninComponent },
   { path: 'register', component: SignupComponent },
-  { path: 'home', component: HomeComponent },
+  { path: 'home', component: HomeComponent, canActivate: [AuthGuard] },
  
   { path: '**', component:PageNotFoundComponent }
 ];

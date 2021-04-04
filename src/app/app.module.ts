@@ -16,7 +16,8 @@ import { HeaderComponent } from './dashboard/header/header.component';
 import { HomeComponent } from './pages/home/home.component';
 
 // Interceptors
-import TokenInterceptor from './shared/interceptors/token.interceptor';
+import  TokenInterceptor  from './shared/interceptors/token-interceptor.service';
+import { AuthGuard } from './shared/guards/auth-guard.service';
 
 
 @NgModule({
@@ -41,7 +42,7 @@ import TokenInterceptor from './shared/interceptors/token.interceptor';
     provide: HTTP_INTERCEPTORS,
     useClass: TokenInterceptor,
     multi: true
-  }],
+  }, AuthGuard],
   bootstrap: [AppComponent],
   schemas:[CUSTOM_ELEMENTS_SCHEMA ]
 })
