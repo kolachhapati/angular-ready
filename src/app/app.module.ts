@@ -14,7 +14,9 @@ import { SignupComponent } from '../app/auth/signup/signup.component';
 import { SidenavComponent } from './dashboard/sidenav/sidenav.component';
 import { HeaderComponent } from './dashboard/header/header.component';
 import { HomeComponent } from './pages/home/home.component';
-import HttpRequestInterceptor from './shared/interceptors/http.interceptor';
+
+// Interceptors
+import TokenInterceptor from './shared/interceptors/token.interceptor';
 
 
 @NgModule({
@@ -37,7 +39,7 @@ import HttpRequestInterceptor from './shared/interceptors/http.interceptor';
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS,
-    useClass: HttpRequestInterceptor,
+    useClass: TokenInterceptor,
     multi: true
   }],
   bootstrap: [AppComponent],
